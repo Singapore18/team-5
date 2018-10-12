@@ -18,5 +18,5 @@
 #profileContent img {
     width: 4em;
     height: auto;
-    object-fit: center;
+    object-fit: cover;
 }
