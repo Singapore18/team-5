@@ -65,6 +65,7 @@ def getemplclient():
 @app.route('/resume/<firstname>', methods=['GET'])
 def getresume(firstname):
     result = db.get(firstname)
+    result['url']='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=adult-beard-boy-220453.jpg'
     return jsonify(result)
 
 # address: "Bishan"
