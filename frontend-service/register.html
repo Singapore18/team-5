@@ -21,7 +21,6 @@
     <link type="text/css" media="all" href="css/sb-registration.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" media="all" href="css/switchery.min.css">
-    <script type="text/javascript" src="js/switchery.min.js"></script>
 
   </head>
 
@@ -30,7 +29,7 @@
 
       <h1>Hi!Job New Talent Registration Form</h1>
 
-      <form onsubmit="return false">
+      <form id = "form" meothod = "post" onsubmit="return false">
         <div class="col-4">
           <label>
             First Name
@@ -63,7 +62,7 @@
           </label>
         </div>
 
-        <div class="col-2">
+        <div class="col-3">
           <label>
             NRIC
             <input placeholder="What is your NRIC?" id="nric" name="nric" tabindex="5">
@@ -71,7 +70,7 @@
         </div>
 
 
-        <div class="col-2">
+        <div class="col-3">
           <label>
             Address
             <input placeholder="We will help you find jobs with short travel time!" id="address" name="email" tabindex="6">
@@ -91,10 +90,22 @@
 
         <div class="col-3">
           <label>
-            Skills
-            <input placeholder="List a few of your primary skills." id="skills" name="skills" tabindex="8">
+            Strength
+            <input placeholder="Tell us your strongest strength!" id="strength" name="strength" tabindex="8">
           </label>
         </div>
+
+        <div class="col-3">
+          <label>
+            Interested Industry
+            <select name = "industries" tabindex="7">
+              <option value = "retail">Retail</option>
+              <option value = "f&b">F&B</option>
+              <option value = "hospitality">Hospitality</option>
+            </select>
+          </label>
+        </div>
+
 
         <div class="col-3">
           <label>
@@ -117,7 +128,7 @@
         </div>
 
         <div class="col-submit">
-          <button class="submitbtn">Submit Form</button>
+          <button class="submitbtn" onClick="submitJson()">Submit Form</button>
         </div>
 
       </form>
@@ -131,5 +142,36 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   </body>
+<script>
+function submitJson() {
+  var obj = {};
+		var elements = form.querySelectorAll( "input, select" );
+		for( var i = 0; i < elements.length; ++i ) {
+			var element = elements[i];
+			var name = element.name;
+			var value = element.value;
+
+			if( name ) {
+				obj[ name ] = value;
+			}
+		}
+
+	 var data = JSON.stringify( obj );
+
+	 $.ajax({
+            url: 'http://54.169.143.230:5000/echo',
+            type: 'post',
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+                $('#target').html(data.msg);
+            },
+            data: JSON.stringify(obj)
+        });
+}
+</script>
 
 </html>
+
+
+
