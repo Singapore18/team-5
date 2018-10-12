@@ -5,7 +5,7 @@ from minds import application
 
 @application.route('/', methods=['GET'])
 def default_route():
-    application.logger.info("base url requested. saying hello")
+    # application.logger.info("base url requested. saying hello")
     return "CFG Team 5 backend page. Hello"
 
 if __name__ == "__main__":

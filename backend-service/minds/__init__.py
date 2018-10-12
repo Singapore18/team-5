@@ -9,6 +9,7 @@ db = DBConnection()
 
 import minds.routes.square
 import minds.routes.hardcode
+import minds.routes.formsubmit
 
 
 

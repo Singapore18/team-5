@@ -6,12 +6,9 @@ from minds import application as app
 
 # logger = logging.getLogger(__name__)
 
-@app.route('/square', methods=['POST'])
-def evaluate():
+@app.route('/echo', methods=['POST'])
+def echo():
     data = request.get_json()
-    app.logger.info("data sent for evaluation {}".format(data))
-    inputValue = data.get("input")
-    result = inputValue * inputValue
-    app.logger.info("My result :{}".format(result))
+    result = data
     return jsonify(result)
 
