@@ -14,3 +14,9 @@
 .employeeCard {
     margin: 1em;
 }
+
+#profileContent img {
+    width: 4em;
+    height: auto;
+    object-fit: center;
+}
