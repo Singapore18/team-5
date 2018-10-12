@@ -1,0 +1,16 @@
+.searchBar {
+    background-image: url(../asset/ui/search.svg);
+    background-repeat: no-repeat;
+    background-position: 0.7em;
+    padding-left: 3em;
+    width: 21em;
+    transition: width 0.3s ease-out
+}
+
+.searchBar:focus {
+    width: 100%;
+}
+
+.employeeCard {
+    margin: 1em;
+}
