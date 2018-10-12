@@ -31,6 +31,12 @@ def submitform():
         data['ind_paragraph'] = paragraph[data['industries']]
     if 'strength' in data and data['strength'] in ('motivated', 'hardworking', 'friendly'):
         data['str_paragraph'] = paragraph_str[data['strength']]
+    if 'email' in data:
+        data['address'] = data['email']
+   
+    if db.check_exist(data['firstName']):
+        return jsonify({"status": "rejected. duplicate received"})
+
     db.insert(data['firstName'], data)
     return jsonify({"status": "form received"})
 
