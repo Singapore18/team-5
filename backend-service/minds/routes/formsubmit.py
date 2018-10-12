@@ -24,7 +24,6 @@ paragraph_str = {
 @app.route('/submitform', methods=['POST'])
 def submitform():
     data = request.get_json()
-
     if 'firstName' in data and data['firstName'] == "":
         return jsonify({"status": "form rejected. have a name pls"})
 
