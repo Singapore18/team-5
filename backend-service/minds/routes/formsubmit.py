@@ -46,7 +46,7 @@ def getallclients():
             'AssistanceDesc': item['assistance'],
             'Interests': item['industries']
         })
-    return jsonify(clientlist)
+    return jsonify(newlist)
 
 @app.route('/list/client', methods=['GET'])
 def getemplclient():
