@@ -13,7 +13,20 @@ def submitform():
     inputValue = data.get("input")
     result = inputValue * inputValue
     app.logger.info("My result :{}".format(result))
-    return jsonify(result)
+
+	output = {}
+    output["firstName"]        = "Peter"
+    output["familyName"]       = "Lee"
+    output["gender"]           = "M"
+    output["nric"]             = "S12312323G"
+    output["address"]          = "Bishan"
+    output["timeAvailability"] = "Weekdays"
+    output["skills"]           = ["communication", "cleaning"]
+	output["tag"]              = "Think Different." 
+	output["assistance"]       = "Walking should be minimised."
+	output["careerCoach"]      = "Jenny"
+
+    return output
 
 
 
