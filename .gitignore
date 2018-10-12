@@ -104,3 +104,6 @@ venv.bak/
 .mypy_cache/
 
 password.py
+
+**.idea/**
+frontend-service/.idea/**
