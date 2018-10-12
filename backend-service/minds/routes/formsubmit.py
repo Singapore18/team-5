@@ -18,6 +18,21 @@ def submitform():
 
 
 @app.route('/client', methods=['GET'])
-def submitform():
-    
-    return jsonify(result)
+def getallclients():
+    fake_data = [
+        {
+            'Id':'1',
+            'Name':'boo',
+            'Tagline':'To be or not to be',
+            'AssistanceDesc':'I need assistance with using something',
+            'Interests':'Retail'
+        },
+        {
+            'Id':'1',
+            'Name':'lee',
+            'Tagline':'Hello',
+            'AssistanceDesc':'I need assistance with using another thing',
+            'Interests':'Hospitality'
+        }
+    ]
+    return jsonify(fake_data)
