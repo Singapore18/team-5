@@ -9,72 +9,118 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Register</title>
+    <title>Hi! Job New Talent Registration Form</title>
 
     <!-- Bootstrap core CSS-->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    <link type="text/css" media="all" href="css/sb-registration.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" media="all" href="css/switchery.min.css">
+    <script type="text/javascript" src="js/switchery.min.js"></script>
 
   </head>
 
-  <body class="bg-dark">
+  <body>
+    <div id="wrapper">
 
-    <div class="container">
-      <div class="card card-register mx-auto mt-5">
-        <div class="card-header">Register an Account</div>
-        <div class="card-body">
-          <form>
-            <div class="form-group">
-              <div class="form-row">
-                <div class="col-md-6">
-                  <div class="form-label-group">
-                    <input type="text" id="firstName" class="form-control" placeholder="First name" required="required" autofocus="autofocus">
-                    <label for="firstName">First name</label>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-label-group">
-                    <input type="text" id="lastName" class="form-control" placeholder="Last name" required="required">
-                    <label for="lastName">Last name</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required">
-                <label for="inputEmail">Email address</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-row">
-                <div class="col-md-6">
-                  <div class="form-label-group">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
-                    <label for="inputPassword">Password</label>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-label-group">
-                    <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm password" required="required">
-                    <label for="confirmPassword">Confirm password</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a class="btn btn-primary btn-block" href="login.html">Register</a>
-          </form>
-          <div class="text-center">
-            <a class="d-block small mt-3" href="login.html">Login Page</a>
-            <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
-          </div>
+      <h1>Hi!Job New Talent Registration Form</h1>
+
+      <form onsubmit="return false">
+        <div class="col-4">
+          <label>
+            First Name
+            <input placeholder="What is your first name?" id="firstName" name="firstName" tabindex="1">
+          </label>
         </div>
-      </div>
+
+        <div class="col-4">
+          <label>
+            Family Name
+            <input placeholder="What is your family name?" id="familyName" name="familyName" tabindex="2">
+          </label>
+        </div>
+
+        <div class="col-4">
+          <label>
+            Gender
+            <select name = "gender" tabindex="3">
+              <option>Male</option>
+              <option>Female</option>
+              <option>Preferred not to disclose</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="col-4">
+          <label>
+            Age
+            <input placeholder="How old are you now?" id="age" name="age" tabindex="4">
+          </label>
+        </div>
+
+        <div class="col-2">
+          <label>
+            NRIC
+            <input placeholder="What is your NRIC?" id="nric" name="nric" tabindex="5">
+          </label>
+        </div>
+
+
+        <div class="col-2">
+          <label>
+            Address
+            <input placeholder="We will help you find jobs with short travel time!" id="address" name="email" tabindex="6">
+          </label>
+        </div>
+
+        <div class="col-3">
+          <label>
+            Time Availability
+            <select name = "timeAvailability" tabindex="7">
+              <option value = "weekdays">Weekdays</option>
+              <option value = "weekends">Weekends</option>
+              <option value = "nightShifts">Night Shits</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="col-3">
+          <label>
+            Skills
+            <input placeholder="List a few of your primary skills." id="skills" name="skills" tabindex="8">
+          </label>
+        </div>
+
+        <div class="col-3">
+          <label>
+            Tagline
+            <input placeholder="A tagline helps us to remember you!" id="tagline" name="tagline" tabindex="9">
+          </label>
+        </div>
+
+        <div class="col-2">
+          <label>Assistance Needed
+            <input placeholder="Do you need any special assistance from us?" id="assistance" name="assistance" tabindex="10">
+          </label>
+        </div>
+
+        <div class="col-2">
+          <label>Career Coach
+            <input placeholder="Who is your career coach?" id="careerCoach" name="careerCoach" tabindex="11">
+          </label>
+
+        </div>
+
+        <div class="col-submit">
+          <button class="submitbtn">Submit Form</button>
+        </div>
+
+      </form>
     </div>
 
     <!-- Bootstrap core JavaScript-->
